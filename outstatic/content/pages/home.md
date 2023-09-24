@@ -1,5 +1,5 @@
 ---
-title: 'Home'
+title: 'mckoda09'
 status: 'published'
 author:
   name: 'Andre Vitorio'
@@ -10,8 +10,7 @@ coverImage: ''
 publishedAt: '2022-03-17T05:35:07.322Z'
 ---
 
-## Hello!
+Welcome to my new site!
 
-# I'm Andre, nice to meet you.
+It's not finished yet.
 
-I am a surfer + musician + software developer + designer + online marketer and whatever else I can cram into this existence.
