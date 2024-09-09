@@ -19,7 +19,7 @@ export default function Home() {
             <TelegramIcon />
           </a>
           <a
-            href="https://t.me/mckoda09"
+            href="https://github.com/mckoda09"
             class="rounded-xl bg-neutral-700/50 p-2 hover:bg-neutral-700/70 transition-colors"
           >
             <GithubIcon />
