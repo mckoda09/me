@@ -5,6 +5,8 @@ import GithubIcon from "../components/icons/Github.tsx";
 import GlobeIcon from "../components/icons/Globe.tsx";
 import DevBadge from "../components/badges/Dev.tsx";
 import TelegramIcon from "../components/icons/Telegram.tsx";
+import SvelteIcon from "../components/icons/Svelte.tsx";
+import NuxtIcon from "../components/icons/Nuxt.tsx";
 
 export default function Home() {
   return (
@@ -127,6 +129,7 @@ export default function Home() {
               <div class="text-xl font-bold">MCEvent</div>
               <div class="flex gap-1">
                 <TypescriptIcon />
+                <NuxtIcon />
               </div>
             </div>
             <a
