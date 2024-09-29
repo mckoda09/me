@@ -1,153 +1,83 @@
-import TypescriptIcon from "../components/icons/Typescript.tsx";
-import DenoIcon from "../components/icons/Deno.tsx";
-import FreshIcon from "../components/icons/Fresh.tsx";
-import GithubIcon from "../components/icons/Github.tsx";
-import GlobeIcon from "../components/icons/Globe.tsx";
-import DevBadge from "../components/badges/Dev.tsx";
-import TelegramIcon from "../components/icons/Telegram.tsx";
-import SvelteIcon from "../components/icons/Svelte.tsx";
-import NuxtIcon from "../components/icons/Nuxt.tsx";
+import ProjectCard from "../components/ProjectCard.tsx";
+import { cn } from "../lib/cn.ts";
+import { TbRosetteDiscountCheckFilled } from "@preact-icons/tb";
 
 export default function Home() {
+  const socials = [
+    { title: "Telegram", url: "https://t.me/mckoda09" },
+    { title: "Github", url: "https://github.com/mckoda09" },
+  ];
+
   return (
-    <main class="p-7 space-y-7">
-      <div class="flex items-center justify-between">
-        <div>mckoda09</div>
-        <div class="flex items-center gap-3 text-2xl">
-          <a
-            href="https://t.me/mckoda09"
-            class="rounded-xl bg-sky-500/10 text-sky-500 p-2 hover:bg-sky-500/20 transition-colors"
-          >
-            <TelegramIcon />
-          </a>
-          <a
-            href="https://github.com/mckoda09"
-            class="rounded-xl bg-neutral-700/50 p-2 hover:bg-neutral-700/70 transition-colors"
-          >
-            <GithubIcon />
-          </a>
-        </div>
-      </div>
-      <div class="text-center py-16 lg:py-32 text-xl md:text-2xl lg:text-3xl">
-        <div>
-          Hi, I'm <b>Aleksii Nikitin</b>.
-        </div>
-        <div>I develop great products.</div>
+    <main>
+      <div class="p-5 flex items-center justify-between mx-auto md:max-w-3xl">
+        <div>@mckoda09</div>
+        <a
+          href="https://t.me/mckoda09"
+          class={cn(
+            "px-2 py-1",
+            "bg-neutral-800 border border-neutral-700 rounded-lg",
+            "active:scale-95 hover:scale-105 transition-transform",
+          )}
+        >
+          Hire me
+        </a>
       </div>
 
-      <div class="text-xl">Projects</div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-7">
-        <div class="border rounded-xl p-3 border-neutral-700 gap-5 flex flex-col justify-between">
-          <img
-            src="/website.png"
-            alt="Website"
-            class="rounded-xl aspect-video"
-          />
-          <div class="space-y-1">
-            <div className="flex justify-between items-center">
-              <div class="text-xl font-bold">This Website</div>
-              <div class="flex gap-1">
-                <TypescriptIcon />
-                <DenoIcon />
-                <FreshIcon />
-              </div>
-            </div>
-            <div class="flex gap-3">
-              <a
-                href="https://github.com/mckoda09/me"
-                class="flex gap-1 items-center text-sm"
-              >
-                <GithubIcon />
-                Github
-              </a>
-              <DevBadge />
-            </div>
-          </div>
+      <div class="mx-auto md:max-w-3xl p-5 py-16 space-y-3">
+        <div class="text-3xl font-bold flex gap-3 items-center">
+          Aleksii Nikitin
+          <TbRosetteDiscountCheckFilled class="text-neutral-500" size={24} />
         </div>
+        <div>Senior TS Developer from Perm, Russia.</div>
+      </div>
 
-        <div class="border rounded-xl p-3 border-neutral-700 gap-5 flex flex-col justify-between">
-          <img
-            src="/tmperm.jpg"
-            alt="Website"
-            class="rounded-xl aspect-video"
+      <div class="mx-auto md:max-w-3xl p-5 space-y-3">
+        <div class="grid md:grid-cols-2 gap-5">
+          <ProjectCard
+            img="/projects/avatar.png"
+            title="Avatar"
+            description="Simple avatar generator for another project"
+            url="https://avatar.mckoda09.ru/"
           />
-          <div class="space-y-1">
-            <div className="flex justify-between items-center">
-              <div class="text-xl font-bold">TMPerm Bot</div>
-              <div class="flex gap-1">
-                <TypescriptIcon />
-                <DenoIcon />
-              </div>
-            </div>
-            <a
-              href="https://github.com/mckoda09/tmperm_bot"
-              class="flex gap-1 items-center text-sm"
-            >
-              <GithubIcon />
-              Github
-            </a>
-          </div>
-        </div>
-
-        <div class="border rounded-xl p-3 border-neutral-700 gap-5 flex flex-col justify-between">
-          <img
-            src="/kvantorium.png"
-            alt="Website"
-            class="rounded-xl aspect-video"
+          <ProjectCard
+            img="/projects/kvantorium.jpg"
+            title="KvantoriumAdminBot"
+            description="Mailing bot for Kvantorium"
+            url="https://github.com/mckoda09/kvantorium-admin-bot"
           />
-          <div class="space-y-1">
-            <div className="flex justify-between items-center">
-              <div class="text-xl font-bold">Kvantorium.Projects</div>
-              <div class="flex gap-1">
-                <TypescriptIcon />
-                <DenoIcon />
-                <FreshIcon />
-              </div>
-            </div>
-            <div class="flex items-center gap-3">
-              <a
-                href="https://github.com/mckoda09/kvantorium-projects"
-                class="flex gap-1 items-center text-sm"
-              >
-                <GithubIcon />
-                Github
-              </a>
-              <DevBadge />
-            </div>
-          </div>
-        </div>
-
-        <div class="border rounded-xl p-3 border-neutral-700 gap-5 flex flex-col justify-between">
-          <img
-            src="/mcevent.png"
-            alt="Website"
-            class="rounded-xl aspect-video"
+          <ProjectCard
+            img="/projects/tmperm.jpg"
+            title="TMPerm"
+            description="Order management for TMPerm"
+            url="https://github.com/mckoda09/tmperm-bot"
           />
-          <div class="space-y-1">
-            <div className="flex justify-between items-center">
-              <div class="text-xl font-bold">MCEvent</div>
-              <div class="flex gap-1">
-                <TypescriptIcon />
-                <NuxtIcon />
-              </div>
-            </div>
-            <a
-              href="https://mcevent.ru"
-              class="flex gap-1 items-center text-sm"
-            >
-              <GlobeIcon />
-              Visit
-            </a>
-          </div>
+          <ProjectCard
+            img="/projects/mcevent.png"
+            title="MCEvent"
+            description="Website for the largest Minecraft Event"
+            url="https://mcevent.ru"
+          />
+          <ProjectCard
+            img="/projects/npcamp.svg"
+            title="NPRadioBot"
+            description="Feedback bot for New Generation Camp"
+            url="https://t.me/npradiobot"
+          />
+          <ProjectCard
+            img="/projects/tapee.png"
+            title="Tapee.su"
+            description="Food organization for schools"
+            url="https://tapee.su"
+          />
         </div>
       </div>
 
-      <div class="text-center text-sm text-neutral-500">
-        ... and at least 10 private projects.
-        <br />
-        Bots, websites, scripts, etc.
-      </div>
+      <footer class="py-16 text-center text-neutral-500 text-sm flex gap-3 items-center justify-center">
+        {socials.map((social) => (
+          <a href={social.url} class="hover:underline">{social.title}</a>
+        ))}
+      </footer>
     </main>
   );
 }
