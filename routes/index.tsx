@@ -25,6 +25,13 @@ export default function Home() {
       </div>
 
       <div class="mx-auto md:max-w-3xl p-5 py-16 space-y-3">
+        <img
+          src="/avatar.jpg"
+          alt="Avatar"
+          class="rounded-full ring ring-neutral-500 ring-offset-4 ring-offset-neutral-900"
+          width={72}
+        />
+        <br />
         <div class="text-3xl font-bold flex gap-3 items-center">
           Aleksii Nikitin
           <TbRosetteDiscountCheckFilled class="text-neutral-500" size={24} />

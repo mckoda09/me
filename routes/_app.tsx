@@ -10,6 +10,7 @@ export default function App({ Component }: PageProps) {
         />
         <title>mckoda09</title>
         <link rel="stylesheet" href="/styles.css" />
+        <link rel="icon" href="/avatar.jpg" />
       </head>
       <body class="bg-neutral-900 text-white">
         <Component />
