@@ -15,7 +15,7 @@ export default function ProjectCard({ img, title, description, url }: Props) {
       class={cn(
         "flex items-center gap-3 rounded-xl p-3",
         "bg-neutral-800 border border-neutral-700",
-        "hover:scale-105 active:scale-95 transition-transform",
+        "md:hover:scale-105 active:scale-95 transition-transform",
       )}
     >
       <div class="aspect-square h-16 p-3">
