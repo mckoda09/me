@@ -42,10 +42,11 @@ export default function Home() {
       <div class="mx-auto md:max-w-3xl p-5 space-y-3">
         <div class="grid md:grid-cols-2 gap-5">
           <ProjectCard
-            img="/projects/avatar.png"
-            title="Avatar"
-            description="Simple avatar generator for another project"
-            url="https://avatar.mckoda09.ru/"
+            img="/projects/tapee.png"
+            title="Tapee.su"
+            description="Food organization for schools"
+            url="https://tapee.su"
+            dev
           />
           <ProjectCard
             img="/projects/kvantorium.jpg"
@@ -72,10 +73,11 @@ export default function Home() {
             url="https://t.me/npradiobot"
           />
           <ProjectCard
-            img="/projects/tapee.png"
-            title="Tapee.su"
-            description="Food organization for schools"
-            url="https://tapee.su"
+            img="/projects/avatar.png"
+            title="Avatar"
+            description="Avatar generator only for edu purposes"
+            url="https://avatar.mckoda09.ru/"
+            deprecated
           />
         </div>
       </div>
