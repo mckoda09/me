@@ -18,5 +18,6 @@
     "preact": "npm:preact@10.22.1"
   },
   "compilerOptions": { "jsx": "react-jsx", "jsxImportSource": "preact" },
-  "nodeModulesDir": true
+  "nodeModulesDir": true,
+  "unstable": ["kv"]
 }
