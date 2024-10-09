@@ -47,6 +47,11 @@ export default function Home() {
         <KvantoriumCard />
         <MCEventCard />
       </div>
+
+      <div class="text-center text-neutral-700 font-tiny text-sm py-16">
+        ROSES ARE RED. VIOLETS ARE BLUE.<br />
+        WELCOME TO MY WEBSITE AT VERSION 0.2.
+      </div>
     </main>
   );
 }
