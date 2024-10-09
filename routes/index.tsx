@@ -1,92 +1,52 @@
-import ProjectCard from "../components/ProjectCard.tsx";
-import { cn } from "../lib/cn.ts";
-import { TbRosetteDiscountCheckFilled } from "@preact-icons/tb";
+import { cn } from "../utils/cn.ts";
+import TMPermCard from "../components/TMPermCard.tsx";
+import KvantoriumCard from "../components/KvantoriumCard.tsx";
+import { TbArrowUpRight, TbDiamond, TbDiamondFilled } from "@preact-icons/tb";
+import MCEventCard from "../components/MCEventCard.tsx";
 
 export default function Home() {
-  const socials = [
-    { title: "Telegram", url: "https://t.me/mckoda09" },
-    { title: "Github", url: "https://github.com/mckoda09" },
-  ];
-
   return (
     <main>
-      <div class="p-5 flex items-center justify-between mx-auto md:max-w-3xl">
-        <div>@mckoda09</div>
-        <a
-          href="https://t.me/mckoda09"
-          class={cn(
-            "px-2 py-1",
-            "bg-neutral-800 border border-neutral-700 rounded-lg",
-            "active:scale-95 hover:scale-105 transition-transform",
-          )}
-        >
-          Hire me
-        </a>
-      </div>
-
-      <div class="mx-auto md:max-w-3xl p-5 py-16 space-y-3">
-        <img
-          src="/avatar.jpg"
-          alt="Avatar"
-          class="rounded-full ring ring-neutral-500 ring-offset-4 ring-offset-neutral-900"
-          width={72}
-        />
-        <br />
-        <div class="text-3xl font-bold flex gap-3 items-center">
-          Aleksii Nikitin
-          <TbRosetteDiscountCheckFilled class="text-neutral-500" size={24} />
-        </div>
-        <div>Senior TS Developer from Perm, Russia.</div>
-      </div>
-
-      <div class="mx-auto md:max-w-3xl p-5 space-y-3">
-        <div class="grid md:grid-cols-2 gap-5">
-          <ProjectCard
-            img="/projects/tapee.png"
-            title="Tapee.su"
-            description="Food organization for schools"
-            url="https://tapee.su"
-            dev
-          />
-          <ProjectCard
-            img="/projects/kvantorium.jpg"
-            title="KvantoriumAdminBot"
-            description="Mailing bot for Kvantorium"
-            url="https://github.com/mckoda09/kvantorium-admin-bot"
-          />
-          <ProjectCard
-            img="/projects/tmperm.jpg"
-            title="TMPerm"
-            description="Order management for TMPerm"
-            url="https://github.com/mckoda09/tmperm-bot"
-          />
-          <ProjectCard
-            img="/projects/mcevent.png"
-            title="MCEvent"
-            description="Website for the largest Minecraft Event"
-            url="https://mcevent.ru"
-          />
-          <ProjectCard
-            img="/projects/npcamp.svg"
-            title="NPRadioBot"
-            description="Feedback bot for New Generation Camp"
-            url="https://t.me/npradiobot"
-          />
-          <ProjectCard
-            img="/projects/avatar.png"
-            title="Avatar"
-            description="Avatar generator only for edu purposes"
-            url="https://avatar.mckoda09.ru/"
-            deprecated
-          />
+      {/* HEADER */}
+      <div
+        className={cn(
+          "container p-5 flex items-center justify-between",
+          "font-tiny text-lg",
+        )}
+      >
+        <div>ALEKSII NIKITIN</div>
+        <div className="flex items-center gap-3 text-neutral-500">
+          <a
+            class="sm:hover:text-neutral-300"
+            target="_blank"
+            href="https://github.com/mckoda09"
+          >
+            GITHUB
+          </a>
+          <a
+            class="sm:hover:text-neutral-300"
+            target="_blank"
+            href="https://t.me/mckoda09"
+          >
+            TELEGRAM
+          </a>
         </div>
       </div>
 
-      <footer class="py-16 text-center text-neutral-500 text-sm flex gap-3 items-center justify-center">
-        {socials.map((social) => (
-          <a href={social.url} class="hover:underline">{social.title}</a>
-        ))}
-      </footer>
+      {/* HERO */}
+      <div className="container px-5 py-32 space-y-5">
+        <div class="text-3xl sm:text-4xl">Develop great products.</div>
+        <div class="text-neutral-500">
+          Hi, I'm Aleksii Nikitin,<br />
+          Senior Typescript Developer from Russia.
+        </div>
+      </div>
+
+      <div class="container p-5 grid sm:grid-cols-2 md:grid-cols-3 gap-14 sm:gap-5 select-none">
+        <TMPermCard />
+        <KvantoriumCard />
+        <MCEventCard />
+      </div>
     </main>
   );
 }

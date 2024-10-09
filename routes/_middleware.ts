@@ -7,7 +7,7 @@ export async function handler(req: Request, ctx: FreshContext) {
     ip: ctx.remoteAddr.hostname,
     path: ctx.url.pathname,
     ua: req.headers.get("user-agent"),
-    date: new Date()
+    date: new Date(),
   };
 
   await kv.set(key, value);

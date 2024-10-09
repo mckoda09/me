@@ -5,7 +5,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["'JetBrains Mono'", "monospace"],
+        mono: ["'JetBrains Mono'", "monospace"],
+        tiny: ["Tiny5", "monospace"],
+        sans: ["Inter"],
       },
     },
   },
