@@ -2,7 +2,7 @@ import { TbArrowUpRight } from "@preact-icons/tb";
 
 export default function TMPermCard() {
   return (
-    <a href="https://github.com/mckoda09/tmperm-bot" class="space-y-5">
+    <a target="_blank" href="https://github.com/mckoda09/tmperm-bot" class="space-y-5">
       <div class="bg-neutral-800 border border-neutral-700 rounded-lg">
         <div class="py-1 px-2 flex justify-between items-center border-b border-neutral-700 text-neutral-400">
           <div class="text-sm font-tiny">ORDERS</div>

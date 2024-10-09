@@ -2,7 +2,7 @@ import { TbArrowUpRight, TbDiamondFilled } from "@preact-icons/tb";
 
 export default function MCEventCard() {
   return (
-    <div class="flex flex-col gap-5">
+    <a href="https://mcevent.ru" target="_blank" class="flex flex-col gap-5">
       <div class="grow bg-neutral-800 border border-neutral-700 rounded-lg">
         <div class="py-1 px-2 flex justify-between items-center border-b border-neutral-700 text-neutral-400">
           <div class="text-sm font-tiny">MCEVENT.RU</div>
@@ -36,6 +36,6 @@ export default function MCEventCard() {
         </div>
         <TbArrowUpRight class="text-xl text-neutral-500" />
       </div>
-    </div>
+    </a>
   );
 }

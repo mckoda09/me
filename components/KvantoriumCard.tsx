@@ -3,6 +3,7 @@ import { TbArrowUpRight } from "@preact-icons/tb";
 export default function KvantoriumCard() {
   return (
     <a
+      target="_blank"
       href="https://github.com/mckoda09/kvantorium-admin-bot"
       class="flex flex-col gap-5"
     >
