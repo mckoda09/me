@@ -1,0 +1,72 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Project from "../components/Project.astro";
+
+const projects = [
+  {
+    title: "tmperm-bot",
+    description: `Управление заказами для ООО "ТракМоторсПермь"`,
+    github: "https://github.com/mckoda09/tmperm-bot",
+    technologies: ["Deno", "Grammy"],
+  },
+  {
+    title: "hellobot",
+    description: `Бот для сбора заявок в канал, их принятия и рассылки`,
+    github: "https://github.com/mckoda09/hellobot",
+    technologies: ["Deno", "Grammy"],
+  },
+  {
+    title: "SwiftVPN",
+    description: `Лендинг для SwiftVPN`,
+    github: "https://github.com/mckoda09/swiftvpn",
+    technologies: ["Astro"],
+  },
+  {
+    title: "kvantorium-admin-bot",
+    description: `Бот для рассылок`,
+    github: "https://github.com/mckoda09/kvantorium-admin-bot",
+    technologies: ["Deno", "Grammy"],
+  },
+  {
+    title: "mediane-bot",
+    description: `Бот для сбора списков`,
+    github: "https://github.com/mckoda09/mediane-bot",
+    technologies: ["Deno", "Grammy"],
+  },
+];
+---
+
+<Layout>
+  <nav class="container p-5 flex items-center justify-between">
+    <div class="text-neutral-500">mckoda09</div>
+  </nav>
+
+  <div class="container px-5 py-16 space-y-7">
+    <div class="text-3xl">Привет, я Лёша 👋</div>
+    <div class="text-neutral-500">
+      Fullstack-разработчик, разработчик Telegram-ботов из Перми.<br />
+      Пишу проекты любой сложности.
+    </div>
+    <div class="flex items-center gap-3">
+      <a class="text-neutral-500 hover:underline" href="https://t.me/mckoda09">
+        Telegram
+      </a>
+      <div class="text-neutral-500">/</div>
+      <a
+        class="text-neutral-500 hover:underline"
+        href="https://github.com/mckoda09"
+      >
+        Github
+      </a>
+      <div class="text-neutral-500">/</div>
+      <a
+        class="text-neutral-500 hover:underline"
+        href="mailto:mckoda09@gmail.com">Email</a
+      >
+    </div>
+  </div>
+
+  <div class="container p-5 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+    {projects.map((project) => <Project {...project} />)}
+  </div>
+</Layout>
