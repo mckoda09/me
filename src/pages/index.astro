@@ -1,62 +1,51 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Project from "../components/Project.astro";
-
-const projects = [
-  {
-    title: "tmperm-bot",
-    description: `Управление заказами для ООО "ТракМоторсПермь"`,
-    github: "https://github.com/mckoda09/tmperm-bot",
-    technologies: ["Deno", "Grammy"],
-  },
-  {
-    title: "hellobot",
-    description: `Бот для сбора заявок в канал, их принятия и рассылки`,
-    github: "https://github.com/mckoda09/hellobot",
-    technologies: ["Deno", "Grammy"],
-  },
-  {
-    title: "SwiftVPN",
-    description: `Лендинг для SwiftVPN`,
-    github: "https://github.com/mckoda09/swiftvpn",
-    technologies: ["Astro"],
-  },
-  {
-    title: "kvantorium-admin-bot",
-    description: `Бот для рассылок`,
-    github: "https://github.com/mckoda09/kvantorium-admin-bot",
-    technologies: ["Deno", "Grammy"],
-  },
-  {
-    title: "mediane-bot",
-    description: `Бот для сбора списков`,
-    github: "https://github.com/mckoda09/mediane-bot",
-    technologies: ["Deno", "Grammy"],
-  },
-];
+import { Icon } from "astro-icon/components";
 ---
 
 <Layout>
-  <nav class="container p-5 flex items-center justify-between">
-    <div class="text-neutral-500">mckoda09</div>
-  </nav>
-
-  <div class="container px-5 py-16 space-y-7">
-    <div class="text-3xl">Привет, я Лёша 👋</div>
-    <div class="text-neutral-400">
-      Fullstack-разработчик, разработчик Telegram-ботов из Перми.<br />
-      Пишу проекты любой сложности.
-    </div>
-    <div class="flex items-center gap-3 text-neutral-500">
-      <a class="hover:underline" href="https://t.me/mckoda09"> Telegram </a>
-      <div>/</div>
-      <a class="hover:underline" href="https://github.com/mckoda09"> Github </a>
-      <div>/</div>
-      <a class="hover:underline" href="mailto:mckoda09@gmail.com">Email</a>
-    </div>
+  <div class="p-5 md:p-9 flex items-center justify-between">
+    <div>Aleksii Nikitin ✌️</div>
+    <a href="https://t.me/mckoda09" target="_blank">
+      <button
+        class="bg-stone-300 text-stone-900 px-4 py-2 md:px-6 md:py-3 rounded-xl md:hover:scale-105 transition-transform flex items-center gap-2"
+      >
+        Get in touch
+        <Icon name="lucide:arrow-right" />
+      </button>
+    </a>
   </div>
 
-  <!-- <div class="container p-5 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-    {projects.map((project) => <Project {...project} />)}
-  </div> -->
+  <div class="px-5 py-32 space-y-16 text-center">
+    <div class="text-4xl md:text-6xl font-serif">
+      Making the web a better place.
+    </div>
+
+    <div class="flex flex-wrap items-center justify-center gap-3">
+      <a href="https://t.me/mckoda09" target="_blank">
+        <button
+          class="px-4 py-2 md:px-6 md:py-3 bg-stone-800 rounded-xl text-stone-300 flex items-center gap-2 md:hover:scale-105 transition-transform"
+        >
+          <Icon name="lucide:send" class="text-stone-500" />
+          Telegram
+        </button></a
+      >
+      <a href="https://github.com/mckoda09" target="_blank">
+        <button
+          class="px-4 py-2 md:px-6 md:py-3 bg-stone-800 rounded-xl text-stone-300 flex items-center gap-2 md:hover:scale-105 transition-transform"
+        >
+          <Icon name="lucide:github" class="text-stone-500" />
+          Github
+        </button>
+      </a>
+      <a href="mailto:mckoda09@gmail.com" target="_blank">
+        <button
+          class="px-4 py-2 md:px-6 md:py-3 bg-stone-800 rounded-xl text-stone-300 flex items-center gap-2 md:hover:scale-105 transition-transform"
+        >
+          <Icon name="lucide:mail" class="text-stone-500" />
+          Email
+        </button>
+      </a>
+    </div>
+  </div>
 </Layout>
